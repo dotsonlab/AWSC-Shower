@@ -65,8 +65,7 @@ while True:
 		flow = 4.1
         stepf = flow * 0.02 * 1000 / 60 / 2.36 * 200
         totalflow = totalflow + flow/60
-        print '%s%f\t%s%f\t%s%f' % ( "Flow (LPM): ",flow,"Step rate (Hz): ",stepf,"Total Flow (L):",totalflow) #comment out if deb
-ugging complete
+        print '%s%f\t%s%f\t%s%f' % ( "Flow (LPM): ",flow,"Step rate (Hz): ",stepf,"Total Flow (L):",totalflow) #comment out if debugging complete
 
         if stepf >= 60 and PWMstarted == 0:
             GPIO.output(stepperENABLE, GPIO.LOW)
